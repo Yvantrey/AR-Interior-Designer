@@ -48,5 +48,4 @@ Assets/
 Yvan Rugamba
 
 ## Game Design Document
-Link to the Game Design Document:
-(Add your GDD link here)
+Link to the Game Design Document: https://docs.google.com/document/d/1ctslj71l-hoFSh-QIULOxT7rEjUifn2IRD6sM8E1Bg0/edit?usp=sharing 
