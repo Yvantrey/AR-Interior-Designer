@@ -9,8 +9,8 @@ Using a compatible Android phone, users can scan real-world surfaces, select vir
 ## Project Links
 
 - GitHub repository: https://github.com/Yvantrey/AR-Interior-Designer 
-- Figma prototype: 
-- Video demonstration: 
+- Figma prototype: I added the folder for Figma in the zip folder.
+- Video demonstration: https://vimeo.com/1232752708 
 
 ## Current Features
 
