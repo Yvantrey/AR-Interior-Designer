@@ -75,10 +75,6 @@ Real-world tracking and placement should be tested on a supported phone.
 
 Resizing changes the preview size. Use the original model dimensions when assessing the furniture's actual fit.
 
-## Interface Design and Navigation
-
-Figma prototype: [Add Figma link]
-
 ### Design Images and App Screenshots
 
 
@@ -93,9 +89,6 @@ Figma prototype: [Add Figma link]
 | Placement indicator | Show where furniture can be placed |
 | UI buttons and icons | Support navigation and furniture controls |
 
-Asset sources and licences: [Add sources, creators, and licence details]
-
-Furniture included in this version: [List your actual furniture models]
 
 ## Hardware Interaction
 
@@ -121,8 +114,6 @@ After feedback, I plan to improve navigation, placement stability, and performan
 ## Current Limitations and Next Steps
 
 This is an initial prototype.
-
-Known issues: [Describe any actual problems or unfinished features]
 
 Planned improvements:
 - Refine the interface using feedback.
