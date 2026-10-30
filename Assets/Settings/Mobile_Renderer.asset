@@ -26,8 +26,6 @@ MonoBehaviour:
     probeVolumeBlendStatesCS: {fileID: 0}
   m_RendererFeatures:
   - {fileID: 1012662431680674300}
-  # ARCore on Vulkan needs this feature to inject its native camera-texture
-  # command buffer before the AR background feature renders.
   - {fileID: 1012662431680674301}
   m_RendererFeatureMap: fcb9b5c51db30d0efdb9b5c51db30d0e
   m_UseNativeRenderPass: 1
