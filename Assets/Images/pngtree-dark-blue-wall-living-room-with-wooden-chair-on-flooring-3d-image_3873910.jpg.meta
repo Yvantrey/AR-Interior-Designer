@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 75a3c0663df38ec40850b5aa5b1c775d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2027482572621854064
+    second: pngtree-dark-blue-wall-living-room-with-wooden-chair-on-flooring-3d-image_3873910_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,7 +137,29 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: pngtree-dark-blue-wall-living-room-with-wooden-chair-on-flooring-3d-image_3873910_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 640
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 075bb6168a0132c10800000000000000
+      internalID: 2027482572621854064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
