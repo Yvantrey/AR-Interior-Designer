@@ -1,0 +1,431 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0462a29b4d472a4d80f80d1154aeb82, type: 3}
+  m_Name: FurnitureCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureCatalog
+  categories:
+  - displayName: Room Sets
+    entries:
+    - displayName: Classic lounge
+      subtitle: "Living  \xB7  8 pieces"
+      prefab: {fileID: 1072482891210302831, guid: ccbd941aca8dc834daf42840251a42ed, type: 3}
+      thumbnail: {fileID: 21300000, guid: c05270a699acfd24a95915183e22324a, type: 3}
+    - displayName: Modern living
+      subtitle: "Living  \xB7  11 pieces"
+      prefab: {fileID: 4140310003713210875, guid: 99f43e2de2a2eae4d803059c7a12c361, type: 3}
+      thumbnail: {fileID: 21300000, guid: ef123dd335d49bd41a33e683fff6c93c, type: 3}
+    - displayName: Media lounge
+      subtitle: "Living  \xB7  8 pieces"
+      prefab: {fileID: 5572588964839559581, guid: 19acf44f69e71db439a20c86985b024a, type: 3}
+      thumbnail: {fileID: 21300000, guid: 68d54bc30cdb6aa42b36ba103d6c7a11, type: 3}
+    - displayName: Minimalist bedroom
+      subtitle: "Bedroom  \xB7  9 pieces"
+      prefab: {fileID: 5011061291026451427, guid: 9ef568c7eaf697c4a831ba148712984a, type: 3}
+      thumbnail: {fileID: 21300000, guid: 9c5bb5a4fac30fc498eeb3280bdc5e80, type: 3}
+    - displayName: Classic bedroom suite
+      subtitle: "Bedroom  \xB7  8 pieces"
+      prefab: {fileID: 5968441235360367479, guid: c193edf3cdcba8044b5f1146f7536c6e, type: 3}
+      thumbnail: {fileID: 21300000, guid: 16d14bd4b08f7f64c8862412be2f8d3d, type: 3}
+    - displayName: Family dining for 6
+      subtitle: "Dining  \xB7  13 pieces"
+      prefab: {fileID: 337642377053839816, guid: 70136ac255b8f4749a1c9e7ebeb01be1, type: 3}
+      thumbnail: {fileID: 21300000, guid: 98ae42c2bd2ad754eb973491f1a8db07, type: 3}
+    - displayName: Modern dining for 8
+      subtitle: "Dining  \xB7  13 pieces"
+      prefab: {fileID: 65485732795859089, guid: e9be453dd3cbe8f4f9d4185fc2b3ca3d, type: 3}
+      thumbnail: {fileID: 21300000, guid: 6dfe7a1aafd9a53499aae4e0cc4d4459, type: 3}
+    - displayName: Bistro for four
+      subtitle: "Dining  \xB7  7 pieces"
+      prefab: {fileID: 1675753055364601642, guid: 16fe77f927d1cd04c8fee9a695ca63e9, type: 3}
+      thumbnail: {fileID: 21300000, guid: c52402fd6790827488a447f2148e4ce6, type: 3}
+    - displayName: Executive office
+      subtitle: "Office  \xB7  8 pieces"
+      prefab: {fileID: 8043423407174430537, guid: c99ab269968df7d49bf6515fd16361aa, type: 3}
+      thumbnail: {fileID: 21300000, guid: 76ec8e2f58d98664298fc26d42db0e77, type: 3}
+    - displayName: Meeting room for 6
+      subtitle: "Office  \xB7  10 pieces"
+      prefab: {fileID: 5092584651359686529, guid: 95da746a52baca34eafd890589a1c449, type: 3}
+      thumbnail: {fileID: 21300000, guid: c090f3df38503204cb8575943a232503, type: 3}
+    - displayName: Reception lounge
+      subtitle: "Office  \xB7  7 pieces"
+      prefab: {fileID: 8005921266746536322, guid: dc325376f7cb89f4c81469896fffedf7, type: 3}
+      thumbnail: {fileID: 21300000, guid: eec639676554333469c1ef016f28eee1, type: 3}
+    - displayName: "Caf\xE9 table for four"
+      subtitle: "Caf\xE9  \xB7  8 pieces"
+      prefab: {fileID: 6445788812158095976, guid: 2f3fce322377fb44fbe4bbbb215da535, type: 3}
+      thumbnail: {fileID: 21300000, guid: 910f92058d6d37641868fda634087126, type: 3}
+    - displayName: Diner booth
+      subtitle: "Caf\xE9  \xB7  5 pieces"
+      prefab: {fileID: 2398652445058200902, guid: 1a2712581fc9f1f449c387200d3fa3e7, type: 3}
+      thumbnail: {fileID: 21300000, guid: 5e7478c5b96ee094ba2db7a9d7c96f69, type: 3}
+    - displayName: Counter bar
+      subtitle: "Caf\xE9  \xB7  8 pieces"
+      prefab: {fileID: 3371099715349922620, guid: 570a882d275d43c42ab4e2a7361e4027, type: 3}
+      thumbnail: {fileID: 21300000, guid: c07f8d77c20c42546acbb747ba0fc6b7, type: 3}
+    - displayName: Order point
+      subtitle: "Caf\xE9  \xB7  6 pieces"
+      prefab: {fileID: 8283028361396382369, guid: ef5885fa1cd74e948a56a1d3e5c57de0, type: 3}
+      thumbnail: {fileID: 21300000, guid: 8cd6d289262a515488fcf317300dc39c, type: 3}
+  - displayName: Living Room
+    entries:
+    - displayName: Classic sofa
+      subtitle: "200 \xD7 88 \xD7 101 cm"
+      prefab: {fileID: 8303375602720013514, guid: adedc96fcbe9c784291ccc321ba0f44e, type: 3}
+      thumbnail: {fileID: 21300000, guid: 758337d4c5768eb47938b1b21c76fd8b, type: 3}
+    - displayName: Three-seat sofa
+      subtitle: "222 \xD7 89 \xD7 69 cm"
+      prefab: {fileID: 1642174566379459839, guid: cad1d81118296b44487ed870d44334ca, type: 3}
+      thumbnail: {fileID: 21300000, guid: fd579587d8268c24cb668cebc9aa2881, type: 3}
+    - displayName: Chesterfield sofa
+      subtitle: "221 \xD7 88 \xD7 69 cm"
+      prefab: {fileID: 8662281953013222272, guid: 1374cdb5ebf24044596de17e77b8c60b, type: 3}
+      thumbnail: {fileID: 21300000, guid: f0c5cdbda65cdae4483fd5d4dfa3a6cf, type: 3}
+    - displayName: Loveseat
+      subtitle: "159 \xD7 95 \xD7 102 cm"
+      prefab: {fileID: 6134160237380415934, guid: 24fe3dff288d31d4f9bd29baece4a8b3, type: 3}
+      thumbnail: {fileID: 21300000, guid: 694e882781c5af64b9cfcc86e4f2933c, type: 3}
+    - displayName: Club loveseat
+      subtitle: "151 \xD7 111 \xD7 86 cm"
+      prefab: {fileID: 1385211137008936375, guid: 342316081fcc71a43947c9c1a11c8605, type: 3}
+      thumbnail: {fileID: 21300000, guid: 19f140b762b2c4948b3ee44f49573d81, type: 3}
+    - displayName: Leather armchair
+      subtitle: "85 \xD7 84 \xD7 90 cm"
+      prefab: {fileID: 5436276231857003485, guid: 8c91babe2b997744896f399394847850, type: 3}
+      thumbnail: {fileID: 21300000, guid: a9e12a02e882ab1418c8ade29763a8d0, type: 3}
+    - displayName: Tan armchair
+      subtitle: "86 \xD7 84 \xD7 91 cm"
+      prefab: {fileID: 1319904545429670454, guid: d556f34aa6228b74b969833a24b86cd1, type: 3}
+      thumbnail: {fileID: 21300000, guid: b636628c3b4fa7e4dae7c719e6bb49b3, type: 3}
+    - displayName: Lounge chair
+      subtitle: "71 \xD7 84 \xD7 101 cm"
+      prefab: {fileID: 2570652872574597156, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      thumbnail: {fileID: 21300000, guid: 8667a9b8c255c6c4d9c648fc8529d9fe, type: 3}
+    - displayName: Sculpted chair
+      subtitle: "88 \xD7 86 \xD7 96 cm"
+      prefab: {fileID: 5213513136154311139, guid: 132c385b7bcaeea43ad5ca1963ffb95f, type: 3}
+      thumbnail: {fileID: 21300000, guid: 8b3165e0b8c729b45a386c6ac7e01db5, type: 3}
+    - displayName: Curve accent chair
+      subtitle: "41 \xD7 61 \xD7 95 cm"
+      prefab: {fileID: 3561442305021193068, guid: 1dde086d79ba6ef4db8bbf248480e810, type: 3}
+      thumbnail: {fileID: 21300000, guid: fcd665ac2baed2b4e90d52d80bb1e830, type: 3}
+    - displayName: Round coffee table
+      subtitle: "108 \xD7 107 \xD7 45 cm"
+      prefab: {fileID: 4401035954778048407, guid: 84d65b98f45d42345908e415084343a9, type: 3}
+      thumbnail: {fileID: 21300000, guid: 24bed39fc34e6f947a8cecc1d5017b01, type: 3}
+    - displayName: Glass coffee table
+      subtitle: "149 \xD7 63 \xD7 42 cm"
+      prefab: {fileID: 231439468616647440, guid: d23bcfe840cfba44a9e8f675ac929829, type: 3}
+      thumbnail: {fileID: 21300000, guid: 9f4e6b207b1043d4ab54499b19146038, type: 3}
+    - displayName: Oval glass table
+      subtitle: "130 \xD7 130 \xD7 40 cm"
+      prefab: {fileID: 2875289631939666946, guid: 9f83b515406624142b51d099590ae5e7, type: 3}
+      thumbnail: {fileID: 21300000, guid: bb1b581bc141d054ba0f216cf0bb098e, type: 3}
+    - displayName: Industrial coffee table
+      subtitle: "104 \xD7 63 \xD7 45 cm"
+      prefab: {fileID: 4555961206304583123, guid: 33a99f42e9bff3b4d8a8dc1b4678de95, type: 3}
+      thumbnail: {fileID: 21300000, guid: a91fa149d605d3446aff598cca18b290, type: 3}
+    - displayName: Round side table
+      subtitle: "51 \xD7 51 \xD7 49 cm"
+      prefab: {fileID: 1687765850485099214, guid: db116ed430eeb4e479c87afb696eea1c, type: 3}
+      thumbnail: {fileID: 21300000, guid: 9be9a6aa9cafa2c4b93aa2ac1e4fe093, type: 3}
+    - displayName: TV console
+      subtitle: "183 \xD7 34 \xD7 42 cm"
+      prefab: {fileID: 3776035293094815601, guid: a37b6fc44685fca47ad9ed3bc1fbdb49, type: 3}
+      thumbnail: {fileID: 21300000, guid: ad03cd01846e17f40bab46b27018c8da, type: 3}
+    - displayName: 65" TV
+      subtitle: "140 \xD7 20 \xD7 89 cm"
+      prefab: {fileID: 900499611381710208, guid: 0fc65f49d3fd56b4eadf2d7a1267809c, type: 3}
+      thumbnail: {fileID: 21300000, guid: c02a4b54cb66cf24a9c03d5c68a3f949, type: 3}
+    - displayName: Cube bookshelf
+      subtitle: "127 \xD7 42 \xD7 159 cm"
+      prefab: {fileID: 6897637634796172449, guid: a0e9d0748f8cd3749911e16507b2bb4b, type: 3}
+      thumbnail: {fileID: 21300000, guid: 53ca08a46a5356345bb879f542e1461b, type: 3}
+    - displayName: Walnut chest
+      subtitle: "72 \xD7 56 \xD7 85 cm"
+      prefab: {fileID: 6332716837739679729, guid: 42530ae40b451d940ac9af8e7bc8d85e, type: 3}
+      thumbnail: {fileID: 21300000, guid: 2b19bce63a6df9e4f89a2b294ab756c8, type: 3}
+    - displayName: Tripod floor lamp
+      subtitle: "47 \xD7 47 \xD7 172 cm"
+      prefab: {fileID: 1211034756477024775, guid: 5f908a74d4bad9544b9259d6f026ce3f, type: 3}
+      thumbnail: {fileID: 21300000, guid: a0982691273a08d4b9039ac317347a4a, type: 3}
+    - displayName: Arc table lamp
+      subtitle: "38 \xD7 54 \xD7 42 cm"
+      prefab: {fileID: 3895176728015853830, guid: f102f0bca1daff2498e647d0bec16bb6, type: 3}
+      thumbnail: {fileID: 21300000, guid: fddda89e114a7fd42b61505c3112c0e6, type: 3}
+    - displayName: Woven rug
+      subtitle: "279 \xD7 121 \xD7 2 cm"
+      prefab: {fileID: 391148825514902030, guid: 5524efa6cb3005f40ac03e9aad3a1d42, type: 3}
+      thumbnail: {fileID: 21300000, guid: 6be03071a23c877428ed8eceb2369a85, type: 3}
+    - displayName: Canvas art
+      subtitle: "174 \xD7 6 \xD7 102 cm"
+      prefab: {fileID: 3046219207377188148, guid: b8e62d9eb7ca61d4e8c7659e669371b9, type: 3}
+      thumbnail: {fileID: 21300000, guid: a6010d3d9926fb4449b7e578d798401e, type: 3}
+    - displayName: Japanese maple
+      subtitle: "76 \xD7 81 \xD7 149 cm"
+      prefab: {fileID: 4534649736680424322, guid: 84da391ba1d60c746b8da1f4a326f330, type: 3}
+      thumbnail: {fileID: 21300000, guid: bd28bfeaf870c7842b54fb796444ea68, type: 3}
+    - displayName: Leafy plant
+      subtitle: "70 \xD7 71 \xD7 133 cm"
+      prefab: {fileID: 1625494935162210846, guid: c28bf66e3dda2ac429dd30dd7ccf2e4f, type: 3}
+      thumbnail: {fileID: 21300000, guid: f1bd576721b7a7a4aa6d753ae46ba16d, type: 3}
+    - displayName: Bamboo planter
+      subtitle: "119 \xD7 33 \xD7 149 cm"
+      prefab: {fileID: 5425398279401316489, guid: 918f858e104b3d3448c6a94fee97f7ce, type: 3}
+      thumbnail: {fileID: 21300000, guid: 6323b76789769d0479484acf3433a5bf, type: 3}
+    - displayName: Tall grass planter
+      subtitle: "40 \xD7 52 \xD7 126 cm"
+      prefab: {fileID: 246383046126787727, guid: d24b2e654daffc74cbed8143722debce, type: 3}
+      thumbnail: {fileID: 21300000, guid: 05895485da807ac44b246bd16cb36fa1, type: 3}
+    - displayName: Ceramic planter
+      subtitle: "54 \xD7 54 \xD7 53 cm"
+      prefab: {fileID: 1566632834580478462, guid: 841ecea808499e54999780d7e480b7dd, type: 3}
+      thumbnail: {fileID: 21300000, guid: c892cade05dc05b47a797328036f7e19, type: 3}
+  - displayName: Bedroom
+    entries:
+    - displayName: Platform bed
+      subtitle: "239 \xD7 210 \xD7 131 cm"
+      prefab: {fileID: 8605659626544260795, guid: c7d1c84d2c87c3b46b943d64f76263c1, type: 3}
+      thumbnail: {fileID: 21300000, guid: eaa95eff9af71994688462c958ee95dd, type: 3}
+    - displayName: Walnut nightstand
+      subtitle: "49 \xD7 39 \xD7 58 cm"
+      prefab: {fileID: 1701134263637257351, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+      thumbnail: {fileID: 21300000, guid: 269692b9f011e054c925b9f77957e129, type: 3}
+    - displayName: Oak nightstand
+      subtitle: "49 \xD7 38 \xD7 58 cm"
+      prefab: {fileID: 1744094818260100609, guid: c3f1f727527125448bb216e8fbc17aa7, type: 3}
+      thumbnail: {fileID: 21300000, guid: 6136db37e23989341aef2afdcc36600c, type: 3}
+    - displayName: Two-door wardrobe
+      subtitle: "108 \xD7 60 \xD7 199 cm"
+      prefab: {fileID: 2890815489222065151, guid: 5aa56a03826335641add32adfefb2739, type: 3}
+      thumbnail: {fileID: 21300000, guid: 54be888c14d86c84096509a954901daa, type: 3}
+    - displayName: Open wardrobe
+      subtitle: "255 \xD7 111 \xD7 199 cm"
+      prefab: {fileID: 3734366842682289081, guid: be0b4780f7daf064b9bf1a74092dd45c, type: 3}
+      thumbnail: {fileID: 21300000, guid: aefbba0845d47c4499beda25124a6779, type: 3}
+    - displayName: Dressing table
+      subtitle: "75 \xD7 45 \xD7 159 cm"
+      prefab: {fileID: 2313456693618465260, guid: 663785036bc576642af9144bc8e743e4, type: 3}
+      thumbnail: {fileID: 21300000, guid: fe288451a82ae314989c153ce6455a1b, type: 3}
+    - displayName: Vanity
+      subtitle: "83 \xD7 46 \xD7 160 cm"
+      prefab: {fileID: 1511696507842683434, guid: ee5b5a04921d647488dd487056fffb8c, type: 3}
+      thumbnail: {fileID: 21300000, guid: 823bc3c5b7da5934ba14ae64420f6f0f, type: 3}
+    - displayName: Floor mirror
+      subtitle: "68 \xD7 3 \xD7 179 cm"
+      prefab: {fileID: 4512748817432195234, guid: 8a8334cde8b9d5d4a97dea8d4b2cfa27, type: 3}
+      thumbnail: {fileID: 21300000, guid: bb1275446f788744bb710c5ce272c261, type: 3}
+    - displayName: Round side table
+      subtitle: "51 \xD7 51 \xD7 49 cm"
+      prefab: {fileID: 1687765850485099214, guid: db116ed430eeb4e479c87afb696eea1c, type: 3}
+      thumbnail: {fileID: 21300000, guid: 9be9a6aa9cafa2c4b93aa2ac1e4fe093, type: 3}
+    - displayName: Globe lamp
+      subtitle: "16 \xD7 16 \xD7 35 cm"
+      prefab: {fileID: 5956320322901968267, guid: 30cb3744750b4024893687e59b146182, type: 3}
+      thumbnail: {fileID: 21300000, guid: f0cc257cfa5180648af4d9a0072f02e1, type: 3}
+    - displayName: Tripod floor lamp
+      subtitle: "47 \xD7 47 \xD7 172 cm"
+      prefab: {fileID: 1211034756477024775, guid: 5f908a74d4bad9544b9259d6f026ce3f, type: 3}
+      thumbnail: {fileID: 21300000, guid: a0982691273a08d4b9039ac317347a4a, type: 3}
+    - displayName: Woven rug
+      subtitle: "279 \xD7 121 \xD7 2 cm"
+      prefab: {fileID: 391148825514902030, guid: 5524efa6cb3005f40ac03e9aad3a1d42, type: 3}
+      thumbnail: {fileID: 21300000, guid: 6be03071a23c877428ed8eceb2369a85, type: 3}
+    - displayName: Laundry basket
+      subtitle: "49 \xD7 51 \xD7 48 cm"
+      prefab: {fileID: 5173690359765823865, guid: 8d6f28bab5e96d342b47fe4d0dac99cb, type: 3}
+      thumbnail: {fileID: 21300000, guid: 56f485be18b6a7f4aa02f40015aded3f, type: 3}
+    - displayName: Leafy plant
+      subtitle: "70 \xD7 71 \xD7 133 cm"
+      prefab: {fileID: 1625494935162210846, guid: c28bf66e3dda2ac429dd30dd7ccf2e4f, type: 3}
+      thumbnail: {fileID: 21300000, guid: f1bd576721b7a7a4aa6d753ae46ba16d, type: 3}
+  - displayName: Dining
+    entries:
+    - displayName: Dining table for 6
+      subtitle: "194 \xD7 97 \xD7 76 cm"
+      prefab: {fileID: 4346966230498349179, guid: 9e047f886f719824c8dba41bd6bc4044, type: 3}
+      thumbnail: {fileID: 21300000, guid: 4399ae1843ea51441a78bd1c7a2db5bb, type: 3}
+    - displayName: Dining table for 8
+      subtitle: "238 \xD7 142 \xD7 76 cm"
+      prefab: {fileID: 6979203563618468643, guid: ec8cc4c3b37d2344d9db45994291d307, type: 3}
+      thumbnail: {fileID: 21300000, guid: a939c19e4fd66644e9e37767b4a8809f, type: 3}
+    - displayName: Round table
+      subtitle: "125 \xD7 125 \xD7 75 cm"
+      prefab: {fileID: 5183984786139581563, guid: f4276e2893e3d5d40a8aa2d6cb650639, type: 3}
+      thumbnail: {fileID: 21300000, guid: d8390694d593c8e4ca0437d06e409e0e, type: 3}
+    - displayName: Square table
+      subtitle: "107 \xD7 107 \xD7 75 cm"
+      prefab: {fileID: 3189890273539891188, guid: a5daeb0a0ef502040a989b04f12a6244, type: 3}
+      thumbnail: {fileID: 21300000, guid: 31521733799d2d54782751f82c4ef602, type: 3}
+    - displayName: Bistro table
+      subtitle: "88 \xD7 88 \xD7 75 cm"
+      prefab: {fileID: 145404858146311848, guid: eb4935d175f018a4ab8980411bec1769, type: 3}
+      thumbnail: {fileID: 21300000, guid: 10b54b380bbfbc34399a10a73c031568, type: 3}
+    - displayName: Pedestal table
+      subtitle: "100 \xD7 100 \xD7 50 cm"
+      prefab: {fileID: 1174827444906206474, guid: dcf14172a6c604f48a7b582fbfbba71c, type: 3}
+      thumbnail: {fileID: 21300000, guid: 51fd0aa17d8b5c640bfd5db5b3bc4f71, type: 3}
+    - displayName: Upholstered chair
+      subtitle: "58 \xD7 57 \xD7 90 cm"
+      prefab: {fileID: 3762170284863939652, guid: 56c8b3fbe09dd6b439fee3a619f43aed, type: 3}
+      thumbnail: {fileID: 21300000, guid: 3dae7a7bd5af5b6419e1a5a3e72b6da7, type: 3}
+    - displayName: Velvet dining chair
+      subtitle: "43 \xD7 43 \xD7 94 cm"
+      prefab: {fileID: 5415372284997739161, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      thumbnail: {fileID: 21300000, guid: 547160d1e55f5324fa524635db9944e9, type: 3}
+    - displayName: White frame chair
+      subtitle: "50 \xD7 49 \xD7 100 cm"
+      prefab: {fileID: 4539346676326559489, guid: 51bc32550bf939342a12fa3c314ef881, type: 3}
+      thumbnail: {fileID: 21300000, guid: 42af1593b9e1b6a4a874edec4ce64fa1, type: 3}
+    - displayName: Spindle chair
+      subtitle: "42 \xD7 41 \xD7 98 cm"
+      prefab: {fileID: 3489700408936882318, guid: fee5226cb948dff4c91f58c867aea185, type: 3}
+      thumbnail: {fileID: 21300000, guid: 8c2c2b780719adc4da247a597f19642a, type: 3}
+    - displayName: Farmhouse chair
+      subtitle: "43 \xD7 43 \xD7 95 cm"
+      prefab: {fileID: 4357493577958627622, guid: 9ce2c216a40544b4ca15e5a5cd131ffe, type: 3}
+      thumbnail: {fileID: 21300000, guid: 4f1b946f9d72e9448a3b4b8fcc72838a, type: 3}
+    - displayName: Bamboo planter
+      subtitle: "119 \xD7 33 \xD7 149 cm"
+      prefab: {fileID: 5425398279401316489, guid: 918f858e104b3d3448c6a94fee97f7ce, type: 3}
+      thumbnail: {fileID: 21300000, guid: 6323b76789769d0479484acf3433a5bf, type: 3}
+    - displayName: Japanese maple
+      subtitle: "76 \xD7 81 \xD7 149 cm"
+      prefab: {fileID: 4534649736680424322, guid: 84da391ba1d60c746b8da1f4a326f330, type: 3}
+      thumbnail: {fileID: 21300000, guid: bd28bfeaf870c7842b54fb796444ea68, type: 3}
+  - displayName: Office
+    entries:
+    - displayName: Executive desk
+      subtitle: "160 \xD7 101 \xD7 75 cm"
+      prefab: {fileID: 511405981594771130, guid: b0ba9b70e67b1d84bb93dc8a4ce259c1, type: 3}
+      thumbnail: {fileID: 21300000, guid: 2bdb9a947d191ec41ae74d2ab3666f52, type: 3}
+    - displayName: Office chair
+      subtitle: "73 \xD7 63 \xD7 109 cm"
+      prefab: {fileID: 9043053060448931554, guid: b397389c686865c49803cd6c5bdcbf11, type: 3}
+      thumbnail: {fileID: 21300000, guid: 6e3c5ef016bb2c54a930b3d63f961100, type: 3}
+    - displayName: Dining table for 8
+      subtitle: "238 \xD7 142 \xD7 76 cm"
+      prefab: {fileID: 6979203563618468643, guid: ec8cc4c3b37d2344d9db45994291d307, type: 3}
+      thumbnail: {fileID: 21300000, guid: a939c19e4fd66644e9e37767b4a8809f, type: 3}
+    - displayName: Cube bookshelf
+      subtitle: "127 \xD7 42 \xD7 159 cm"
+      prefab: {fileID: 6897637634796172449, guid: a0e9d0748f8cd3749911e16507b2bb4b, type: 3}
+      thumbnail: {fileID: 21300000, guid: 53ca08a46a5356345bb879f542e1461b, type: 3}
+    - displayName: Lounge chair
+      subtitle: "71 \xD7 84 \xD7 101 cm"
+      prefab: {fileID: 2570652872574597156, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      thumbnail: {fileID: 21300000, guid: 8667a9b8c255c6c4d9c648fc8529d9fe, type: 3}
+    - displayName: Sculpted chair
+      subtitle: "88 \xD7 86 \xD7 96 cm"
+      prefab: {fileID: 5213513136154311139, guid: 132c385b7bcaeea43ad5ca1963ffb95f, type: 3}
+      thumbnail: {fileID: 21300000, guid: 8b3165e0b8c729b45a386c6ac7e01db5, type: 3}
+    - displayName: Oval glass table
+      subtitle: "130 \xD7 130 \xD7 40 cm"
+      prefab: {fileID: 2875289631939666946, guid: 9f83b515406624142b51d099590ae5e7, type: 3}
+      thumbnail: {fileID: 21300000, guid: bb1b581bc141d054ba0f216cf0bb098e, type: 3}
+    - displayName: Arc table lamp
+      subtitle: "38 \xD7 54 \xD7 42 cm"
+      prefab: {fileID: 3895176728015853830, guid: f102f0bca1daff2498e647d0bec16bb6, type: 3}
+      thumbnail: {fileID: 21300000, guid: fddda89e114a7fd42b61505c3112c0e6, type: 3}
+    - displayName: Tall grass planter
+      subtitle: "40 \xD7 52 \xD7 126 cm"
+      prefab: {fileID: 246383046126787727, guid: d24b2e654daffc74cbed8143722debce, type: 3}
+      thumbnail: {fileID: 21300000, guid: 05895485da807ac44b246bd16cb36fa1, type: 3}
+    - displayName: Bamboo planter
+      subtitle: "119 \xD7 33 \xD7 149 cm"
+      prefab: {fileID: 5425398279401316489, guid: 918f858e104b3d3448c6a94fee97f7ce, type: 3}
+      thumbnail: {fileID: 21300000, guid: 6323b76789769d0479484acf3433a5bf, type: 3}
+    - displayName: Ceramic planter
+      subtitle: "54 \xD7 54 \xD7 53 cm"
+      prefab: {fileID: 1566632834580478462, guid: 841ecea808499e54999780d7e480b7dd, type: 3}
+      thumbnail: {fileID: 21300000, guid: c892cade05dc05b47a797328036f7e19, type: 3}
+  - displayName: "Caf\xE9"
+    entries:
+    - displayName: "Caf\xE9 table"
+      subtitle: "87 \xD7 97 \xD7 74 cm"
+      prefab: {fileID: 4751089284093323668, guid: 9e3493f0cdc1750438075d301b36c8c7, type: 3}
+      thumbnail: {fileID: 21300000, guid: edc4701573bc35b438f1d0cb65e4ea84, type: 3}
+    - displayName: "Caf\xE9 table, walnut"
+      subtitle: "87 \xD7 97 \xD7 74 cm"
+      prefab: {fileID: 896126519737794659, guid: 34ba81d00f84e71458d0c18b6e342a9d, type: 3}
+      thumbnail: {fileID: 21300000, guid: c43e47a8713908a44881c1881b11a64b, type: 3}
+    - displayName: "Long caf\xE9 table"
+      subtitle: "150 \xD7 74 \xD7 76 cm"
+      prefab: {fileID: 8914657270049646144, guid: 0f904069b8302cf4187d5e0dd4bc109f, type: 3}
+      thumbnail: {fileID: 21300000, guid: 87b996f2a3e1daf4dbb7c689657b495a, type: 3}
+    - displayName: High round table
+      subtitle: "77 \xD7 79 \xD7 88 cm"
+      prefab: {fileID: 8207203364747853299, guid: f5d361c49657b084994c4eeb035366ba, type: 3}
+      thumbnail: {fileID: 21300000, guid: c0397b31ae3c0bc49b1f3c5a17badbac, type: 3}
+    - displayName: High table
+      subtitle: "122 \xD7 64 \xD7 88 cm"
+      prefab: {fileID: 5034573292400809566, guid: 45e7480db8248d9498a81e8a3184d31c, type: 3}
+      thumbnail: {fileID: 21300000, guid: aba6943804ecde246897f258d51791b5, type: 3}
+    - displayName: Bentwood chair
+      subtitle: "53 \xD7 53 \xD7 93 cm"
+      prefab: {fileID: 8590609287382844918, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      thumbnail: {fileID: 21300000, guid: 9d593e168d1d38541bd5b16e3bc10f68, type: 3}
+    - displayName: Walnut bentwood chair
+      subtitle: "53 \xD7 53 \xD7 93 cm"
+      prefab: {fileID: 6509649792874437055, guid: 154ce97fac6feac4a8c58a0a2c432bad, type: 3}
+      thumbnail: {fileID: 21300000, guid: 1721e9a2444740a418af8774bbf65ea8, type: 3}
+    - displayName: Industrial chair
+      subtitle: "45 \xD7 51 \xD7 89 cm"
+      prefab: {fileID: 5887502815982210937, guid: 9a1144e3e5468a9489c869c9e8f805ab, type: 3}
+      thumbnail: {fileID: 21300000, guid: 22ce0a5c2e4640e48917e31a58f07ab1, type: 3}
+    - displayName: Counter stool, coral
+      subtitle: "39 \xD7 38 \xD7 65 cm"
+      prefab: {fileID: 433697308251583086, guid: f0f2727b80e8a5240acb0d36c3b76a9d, type: 3}
+      thumbnail: {fileID: 21300000, guid: 820145cd690a2b9419fd97c8d13adb43, type: 3}
+    - displayName: Counter stool, teal
+      subtitle: "39 \xD7 38 \xD7 65 cm"
+      prefab: {fileID: 2060577414461279415, guid: 7d37415c232028741af112ceacf18e8d, type: 3}
+      thumbnail: {fileID: 21300000, guid: 7f430a31dcc7293408d878b642d08a2c, type: 3}
+    - displayName: Metal counter stool
+      subtitle: "39 \xD7 39 \xD7 65 cm"
+      prefab: {fileID: 8205371047077241806, guid: a9a47e4aa27dfcf4ab2f3bd09d3190c6, type: 3}
+      thumbnail: {fileID: 21300000, guid: 7a7b01387e6efdb4a8abe60fcd3464a7, type: 3}
+    - displayName: Booth seat, coral
+      subtitle: "135 \xD7 66 \xD7 99 cm"
+      prefab: {fileID: 11459771744264273, guid: 5baac901d6ad5114a853998ca3961502, type: 3}
+      thumbnail: {fileID: 21300000, guid: 8570aa64c2430114f8ab819373973e6b, type: 3}
+    - displayName: Booth seat, teal
+      subtitle: "134 \xD7 61 \xD7 87 cm"
+      prefab: {fileID: 7279754322495257941, guid: b875457081a450e489a96c21d43fbeaa, type: 3}
+      thumbnail: {fileID: 21300000, guid: 2cacce0d6fa8f074b85ab8b0f6bab464, type: 3}
+    - displayName: Booth seat, graphite
+      subtitle: "136 \xD7 63 \xD7 95 cm"
+      prefab: {fileID: 9033838380338694546, guid: e7a1f4d801e868145b88def9fe774c75, type: 3}
+      thumbnail: {fileID: 21300000, guid: 137273ce9a0197742bebdb4072b141fc, type: 3}
+    - displayName: Service counter
+      subtitle: "155 \xD7 73 \xD7 78 cm"
+      prefab: {fileID: 1873181170135783554, guid: 426594c9b1dd70f4f9646c92426e0f6a, type: 3}
+      thumbnail: {fileID: 21300000, guid: 9bed5ebd1756ad14f89332deda2e0189, type: 3}
+    - displayName: Prep counter
+      subtitle: "141 \xD7 86 \xD7 79 cm"
+      prefab: {fileID: 3918198658240754815, guid: 9152b1f461a5d63408dd9862fd128a9f, type: 3}
+      thumbnail: {fileID: 21300000, guid: cf70f5c7bdd05b44bbb567329115bab2, type: 3}
+    - displayName: Pastry display
+      subtitle: "69 \xD7 62 \xD7 64 cm"
+      prefab: {fileID: 7271460962066440182, guid: 6c8a07e14993cbb428a73cb0fe227a3a, type: 3}
+      thumbnail: {fileID: 21300000, guid: 2ce33f51166fb374ab82bfe0b577bee9, type: 3}
+    - displayName: Drink station
+      subtitle: "93 \xD7 90 \xD7 111 cm"
+      prefab: {fileID: 7373467827320925487, guid: f5ad6194fa427744a89226d5d7900014, type: 3}
+      thumbnail: {fileID: 21300000, guid: 2842d38ae84744948a401357c8ee4ace, type: 3}
+    - displayName: Self-order kiosk
+      subtitle: "62 \xD7 58 \xD7 149 cm"
+      prefab: {fileID: 65469493923336365, guid: 6a52e7a926d83f24ba738fbf28a07571, type: 3}
+      thumbnail: {fileID: 21300000, guid: 08b41ca08b828ed49821a91b6ee67bbf, type: 3}
+    - displayName: Waste station
+      subtitle: "112 \xD7 73 \xD7 98 cm"
+      prefab: {fileID: 5962731938935321455, guid: 1a94b1de14d744a45a44a892ed9ed8d0, type: 3}
+      thumbnail: {fileID: 21300000, guid: aa3b04cffb8723042b7054caf2f669a5, type: 3}
