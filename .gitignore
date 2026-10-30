@@ -108,3 +108,9 @@ InitTestScene*.unity*
 
 # Stray standalone demo build bundled inside an asset pack (not needed at runtime)
 /[Aa]ssets/Modern Furniture/Demo Build/
+
+# Android build output and IDE files
+*_BackUpThisFolder_ButDontShipItWithYourGame/
+*_BurstDebugInformation_DoNotShip/
+.vscode/
+*.slnx
