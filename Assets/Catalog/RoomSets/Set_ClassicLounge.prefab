@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 576105719195547301}
+  - component: {fileID: 4126019361234464916}
   m_Layer: 0
   m_Name: Set_ClassicLounge
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 7741664172694201562}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4126019361234464916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072482891210302831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Classic lounge
+  type: Living room set
+  material: Oxblood leather, Woven wool blend, Mahogany
+  weightKg: 182
+  thumbnail: {fileID: 21300000, guid: c05270a699acfd24a95915183e22324a, type: 3}
+  isRoomSet: 1
+  pieceCount: 8
 --- !u!1 &8541538636788374209
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,7 +85,7 @@ Transform:
   - {fileID: 3192397645538344380}
   - {fileID: 7849338764078543521}
   - {fileID: 8268834805895567351}
-  - {fileID: 5422279543160751156}
+  - {fileID: 7497982762831164929}
   - {fileID: 3240491602765010450}
   - {fileID: 5756850850312479203}
   - {fileID: 3818070576263489260}
@@ -443,6 +463,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
   m_PrefabInstance: {fileID: 5172165861586410637}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6704130968246402427
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7741664172694201562}
+    m_Modifications:
+    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3778355
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5436276231857003485, guid: 8c91babe2b997744896f399394847850, type: 3}
+      propertyPath: m_Name
+      value: Chair_Leather
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c91babe2b997744896f399394847850, type: 3}
+--- !u!4 &7497982762831164929 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
+  m_PrefabInstance: {fileID: 6704130968246402427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7547294961058059126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -504,66 +586,4 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 311615627279000023, guid: adedc96fcbe9c784291ccc321ba0f44e, type: 3}
   m_PrefabInstance: {fileID: 7547294961058059126}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &9095083788878139214
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7741664172694201562}
-    m_Modifications:
-    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.3778355
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5436276231857003485, guid: 8c91babe2b997744896f399394847850, type: 3}
-      propertyPath: m_Name
-      value: Chair_Leather
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8c91babe2b997744896f399394847850, type: 3}
---- !u!4 &5422279543160751156 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3821291092847364986, guid: 8c91babe2b997744896f399394847850, type: 3}
-  m_PrefabInstance: {fileID: 9095083788878139214}
   m_PrefabAsset: {fileID: 0}

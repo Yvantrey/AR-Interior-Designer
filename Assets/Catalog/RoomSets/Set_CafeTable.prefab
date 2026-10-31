@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8117546249242609046}
+  - component: {fileID: 3571769069774032682}
   m_Layer: 0
   m_Name: Set_CafeTable
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 2419511283381936288}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3571769069774032682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6445788812158095976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: "Caf\xE9 table for four"
+  type: "Caf\xE9 set"
+  material: Bent birch plywood, Plastic tray, Birch laminate
+  weightKg: 79.8
+  thumbnail: {fileID: 21300000, guid: 910f92058d6d37641868fda634087126, type: 3}
+  isRoomSet: 1
+  pieceCount: 8
 --- !u!1 &6931609703914194352
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,9 +83,9 @@ Transform:
   m_Children:
   - {fileID: 8532287172807625996}
   - {fileID: 5809009742213532908}
-  - {fileID: 1648589617082894171}
-  - {fileID: 7937640949711120614}
-  - {fileID: 6241168083639600077}
+  - {fileID: 9033558783988940356}
+  - {fileID: 8780068134155526265}
+  - {fileID: 4432269232188939740}
   - {fileID: 3744650350453302636}
   - {fileID: 4400871785385068226}
   - {fileID: 4063965797383051458}
@@ -195,68 +215,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
   m_PrefabInstance: {fileID: 1200115647734991054}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1632273432577181679
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2419511283381936288}
-    m_Modifications:
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.5792513
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8590609287382844918, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_Name
-      value: Cafe_ChairBirch
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
---- !u!4 &6241168083639600077 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-  m_PrefabInstance: {fileID: 1632273432577181679}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2242346642601049345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -319,7 +277,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7599454515973353485, guid: 9e3493f0cdc1750438075d301b36c8c7, type: 3}
   m_PrefabInstance: {fileID: 2242346642601049345}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &3319785301725555908
+--- !u!1001 &4171182305519019099
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -376,10 +334,72 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
---- !u!4 &7937640949711120614 stripped
+--- !u!4 &8780068134155526265 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-  m_PrefabInstance: {fileID: 3319785301725555908}
+  m_PrefabInstance: {fileID: 4171182305519019099}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4424699350837312102
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2419511283381936288}
+    m_Modifications:
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.6318739
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000004371139
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8590609287382844918, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_Name
+      value: Cafe_ChairBirch
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+--- !u!4 &9033558783988940356 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+  m_PrefabInstance: {fileID: 4424699350837312102}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5645612927795386444
 PrefabInstance:
@@ -443,68 +463,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8520568978920325262, guid: 918f858e104b3d3448c6a94fee97f7ce, type: 3}
   m_PrefabInstance: {fileID: 5645612927795386444}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6258563956501480313
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2419511283381936288}
-    m_Modifications:
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.6318739
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.00000004371139
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8590609287382844918, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-      propertyPath: m_Name
-      value: Cafe_ChairBirch
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
---- !u!4 &1648589617082894171 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
-  m_PrefabInstance: {fileID: 6258563956501480313}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7006464609815799073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -566,4 +524,66 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5966246786734817357, guid: d68a1b951f005dd41aecf6dc8b116015, type: 3}
   m_PrefabInstance: {fileID: 7006464609815799073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9059131550352398846
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2419511283381936288}
+    m_Modifications:
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5792513
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8590609287382844918, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+      propertyPath: m_Name
+      value: Cafe_ChairBirch
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+--- !u!4 &4432269232188939740 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4628034966021342242, guid: 57145b8f40bf51b47b099e12496cfbe2, type: 3}
+  m_PrefabInstance: {fileID: 9059131550352398846}
   m_PrefabAsset: {fileID: 0}

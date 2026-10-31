@@ -30,8 +30,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4755840843148691504}
-  - {fileID: 7934834260374266400}
   - {fileID: 5043730279141228147}
+  - {fileID: 475942169631438179}
   - {fileID: 2168220306798231789}
   - {fileID: 3114070629119613720}
   - {fileID: 5030474840950940237}
@@ -48,6 +48,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7932099338281552960}
+  - component: {fileID: 7235723699951365089}
   m_Layer: 0
   m_Name: Set_ClassicBedroom
   m_TagString: Untagged
@@ -71,68 +72,25 @@ Transform:
   - {fileID: 3246216264412686739}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &803824821487821331
-PrefabInstance:
+--- !u!114 &7235723699951365089
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3246216264412686739}
-    m_Modifications:
-    - target: {fileID: 1701134263637257351, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
-      propertyPath: m_Name
-      value: Storage_NightWalnut
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.5019878
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.0545868
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
---- !u!4 &7934834260374266400 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
-  m_PrefabInstance: {fileID: 803824821487821331}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968441235360367479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Classic bedroom suite
+  type: Bedroom set
+  material: Walnut, Oak slatted headboard, Opal glass globe
+  weightKg: 257.3
+  thumbnail: {fileID: 21300000, guid: 16d14bd4b08f7f64c8862412be2f8d3d, type: 3}
+  isRoomSet: 1
+  pieceCount: 8
 --- !u!1001 &1886023449369781483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -209,7 +167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5019878
+      value: -1.5019878
       objectReference: {fileID: 0}
     - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -504,6 +462,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1232458906983265316, guid: c7d1c84d2c87c3b46b943d64f76263c1, type: 3}
   m_PrefabInstance: {fileID: 5988299677117512724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7179601141730899280
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3246216264412686739}
+    m_Modifications:
+    - target: {fileID: 1701134263637257351, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+      propertyPath: m_Name
+      value: Storage_NightWalnut
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5019878
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.0545868
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+--- !u!4 &475942169631438179 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7294129157780881459, guid: 3ff29aab3f811d542acc14bed1c1b41a, type: 3}
+  m_PrefabInstance: {fileID: 7179601141730899280}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8204421898782015213
 PrefabInstance:

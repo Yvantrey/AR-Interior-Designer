@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6445486984604144159}
+  - component: {fileID: 4305141962342366411}
   m_Layer: 0
   m_Name: Cafe_WasteStation
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 8907406033728862332}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4305141962342366411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5962731938935321455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Waste station
+  type: Waste station
+  material: Oak cladding, stainless inserts
+  weightKg: 55
+  thumbnail: {fileID: 21300000, guid: aa3b04cffb8723042b7054caf2f669a5, type: 3}
+  isRoomSet: 0
+  pieceCount: 1
 --- !u!1001 &2762466252889382144
 PrefabInstance:
   m_ObjectHideFlags: 0

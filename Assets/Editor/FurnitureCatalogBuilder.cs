@@ -168,6 +168,109 @@ public static class FurnitureCatalogBuilder
     };
 
     //=========================================================
+    // Spec table: type, materials, estimated weight at real size
+    // (shown on the captured spec sheet; sizes are measured live)
+    //=========================================================
+
+    private static readonly Dictionary<string, (string type, string material, float kg)> Specs =
+        new Dictionary<string, (string, string, float)>
+    {
+        { "Sofa_Classic",         ("Sofa", "Burgundy leather, carved wood trim", 68f) },
+        { "Sofa_ThreeSeat",       ("Sofa", "Oxblood leather, button-tufted seat", 75f) },
+        { "Sofa_Chesterfield",    ("Chesterfield sofa", "Tufted burgundy leather, rolled arms", 85f) },
+        { "Sofa_Loveseat",        ("Loveseat", "Brown leather, bentwood arms", 48f) },
+        { "Sofa_Club",            ("Club loveseat", "Tan aniline leather, walnut base", 55f) },
+        { "Chair_Leather",        ("Armchair", "Oxblood leather, bentwood frame", 28f) },
+        { "Chair_Tan",            ("Armchair", "Distressed tan leather, bentwood frame", 27f) },
+        { "Chair_LoungeFrame",    ("Lounge chair", "White leather, chrome tube frame", 14f) },
+        { "Chair_Sculpted",       ("Accent chair", "Black faceted shell, steel base", 16f) },
+        { "Chair_Curve",          ("Accent chair", "Gloss white composite", 9f) },
+        { "Table_CoffeeRound",    ("Coffee table", "Mahogany, carved pedestal", 24f) },
+        { "Table_CoffeeMetal",    ("Coffee table", "Blackened steel, smoked glass", 30f) },
+        { "Table_CoffeeGlass",    ("Coffee table", "Tempered glass, black steel", 26f) },
+        { "Table_CoffeeOval",     ("Coffee table", "Tinted glass, chrome base", 22f) },
+        { "Table_Side",           ("Side table", "White lacquer, steel legs", 5f) },
+        { "Storage_TvConsole",    ("TV console", "Oak veneer", 32f) },
+        { "Decor_Tv",             ("Television", "65-inch LED panel, aluminium stand", 23f) },
+        { "Storage_Bookshelf",    ("Bookshelf", "Black powder-coated steel", 35f) },
+        { "Storage_Sideboard",    ("Chest of drawers", "Walnut, brass handles", 38f) },
+        { "Light_Tripod",         ("Floor lamp", "Linen shade, black steel tripod", 4f) },
+        { "Light_Arc",            ("Table lamp", "Brushed aluminium", 2f) },
+        { "Light_Globe",          ("Table lamp", "Opal glass globe, chrome stem", 1.5f) },
+        { "Rug_Woven",            ("Rug", "Woven wool blend, sand", 9f) },
+        { "Plant_Leafy",          ("Plant", "Live foliage, nursery pot", 6f) },
+        { "Plant_Maple",          ("Plant", "Japanese maple, stone pot", 18f) },
+        { "Plant_Bamboo",         ("Planter", "Bamboo, timber trough", 40f) },
+        { "Plant_Grass",          ("Planter", "Ornamental grass, timber pot", 12f) },
+        { "Plant_Planter",        ("Planter", "Matte ceramic", 11f) },
+        { "Decor_Canvas",         ("Wall art", "Acrylic on canvas, timber frame", 5f) },
+
+        { "Bed_Platform",         ("Bed", "Oak slatted headboard, cotton linen", 70f) },
+        { "Storage_OpenWardrobe", ("Wardrobe", "Oak veneer, louvred doors", 95f) },
+        { "Storage_Wardrobe",     ("Wardrobe", "Mahogany, brass handles", 110f) },
+        { "Storage_NightWalnut",  ("Nightstand", "Walnut, brass handles", 16f) },
+        { "Storage_NightOak",     ("Nightstand", "Weathered oak, brass pulls", 15f) },
+        { "Storage_Vanity",       ("Vanity", "Mahogany, oval mirror", 30f) },
+        { "Storage_Dresser",      ("Dressing table", "Walnut, tilting mirror", 34f) },
+        { "Decor_FloorMirror",    ("Floor mirror", "Glass, white timber frame", 14f) },
+        { "Decor_Laundry",        ("Laundry basket", "Cotton liner, copper wire", 1.5f) },
+
+        { "Dining_Table6",        ("Dining table", "Mahogany, inlaid top", 55f) },
+        { "Dining_Table8",        ("Dining table", "Black lacquer, block base", 90f) },
+        { "Dining_TableSquare",   ("Dining table", "Black ash", 30f) },
+        { "Dining_TableRound",    ("Dining table", "White laminate, copper legs", 25f) },
+        { "Dining_TableBistro",   ("Bistro table", "Birch, tapered legs", 14f) },
+        { "Dining_TablePedestal", ("Pedestal table", "Terracotta laminate, cast-iron base", 20f) },
+        { "Dining_ChairBeige",    ("Dining chair", "Beige bouclé, walnut legs", 7f) },
+        { "Dining_ChairRed",      ("Dining chair", "Crimson velvet, oak legs", 7.5f) },
+        { "Dining_ChairSpindle",  ("Dining chair", "Black-stained ash, white seat pad", 6f) },
+        { "Dining_ChairWhite",    ("Dining chair", "White lacquer, black seat pad", 6f) },
+        { "Dining_ChairFarm",     ("Dining chair", "Solid pine", 6.5f) },
+
+        { "Office_Desk",          ("Desk", "Black oak veneer", 45f) },
+        { "Office_Chair",         ("Office chair", "Black leather and mesh, aluminium base", 15f) },
+
+        { "Cafe_ChairBirch",      ("Café chair", "Bent birch plywood, steel legs", 4.5f) },
+        { "Cafe_ChairWalnut",     ("Café chair", "Bent walnut plywood, steel legs", 4.5f) },
+        { "Cafe_ChairIndustrial", ("Café chair", "Ash seat, black steel frame", 6f) },
+        { "Cafe_StoolOrange",     ("Counter stool", "Coral vinyl, chrome base", 9f) },
+        { "Cafe_StoolTeal",       ("Counter stool", "Teal vinyl, chrome base", 9f) },
+        { "Cafe_StoolMetal",      ("Counter stool", "Ash seat, brushed steel", 6f) },
+        { "Cafe_BoothCoral",      ("Booth seat", "Coral vinyl, steel legs", 40f) },
+        { "Cafe_BoothTeal",       ("Booth seat", "Teal vinyl, steel legs", 40f) },
+        { "Cafe_BoothGraphite",   ("Booth seat", "Graphite fabric, violet vinyl back", 45f) },
+        { "Cafe_Table4",          ("Café table", "Birch laminate, steel pedestal", 20f) },
+        { "Cafe_Table4Dark",      ("Café table", "Walnut laminate, steel pedestal", 20f) },
+        { "Cafe_TableLong",       ("Café table", "Birch laminate, steel legs", 30f) },
+        { "Cafe_TableHigh",       ("High table", "Birch laminate, steel column", 24f) },
+        { "Cafe_TableHighRect",   ("High table", "Birch laminate, steel column", 26f) },
+        { "Cafe_Counter",         ("Service counter", "Oak cladding, quartz top", 120f) },
+        { "Cafe_PrepCounter",     ("Prep counter", "Stainless steel, oak top", 85f) },
+        { "Cafe_WasteStation",    ("Waste station", "Oak cladding, stainless inserts", 55f) },
+        { "Cafe_Kiosk",           ("Order kiosk", "Touchscreen, aluminium stand", 35f) },
+        { "Cafe_Display",         ("Display case", "Glass, black steel, LED lighting", 45f) },
+        { "Cafe_DrinkStation",    ("Drink dispenser", "Stainless steel", 60f) },
+
+        { "Acc_Centerpiece",      ("Decor", "Carved wood bowl", 2f) },
+        { "Acc_CenterPlant",      ("Decor", "Ceramic vase, faux plant", 1f) },
+        { "Acc_Vases",            ("Decor", "Glazed ceramic", 3f) },
+        { "Acc_Candlestick",      ("Decor", "Black iron", 0.6f) },
+        { "Acc_PlaceSetting",     ("Tableware", "Porcelain", 1f) },
+        { "Acc_Spheres",          ("Decor", "Gilded metal", 1.2f) },
+        { "Acc_Books",            ("Decor", "Hardcover books", 1f) },
+        { "Acc_Vase",             ("Decor", "Matte ceramic", 0.8f) },
+        { "Acc_TrayMeal",         ("Meal tray", "Plastic tray, paper packaging", 1f) },
+        { "Acc_TrayBurger",       ("Meal tray", "Plastic tray, paper packaging", 0.8f) },
+        { "Acc_Register",         ("POS terminal", "Touchscreen", 3f) },
+    };
+
+    private static readonly Dictionary<string, string> SetTypes = new Dictionary<string, string>
+    {
+        { "Living", "Living room set" }, { "Bedroom", "Bedroom set" }, { "Dining", "Dining set" },
+        { "Office", "Office set" }, { "Café", "Café set" },
+    };
+
+    //=========================================================
     // Catalogue tabs (room sets come first, then single items)
     //=========================================================
 
@@ -567,12 +670,14 @@ public static class FurnitureCatalogBuilder
         {
             if (!sets.TryGetValue(def.id, out GameObject set))
                 continue;
+            Sprite setThumb = RenderThumbnail(set, def.id, 150f, 34f, 0.05f);
+            AssignThumbnail(set, setThumb);
             setTab.entries.Add(new CatalogEntry
             {
                 displayName = def.name,
                 subtitle = def.room + "  ·  " + setPieceCounts[def.id] + " pieces",
                 prefab = set,
-                thumbnail = RenderThumbnail(set, def.id, 150f, 34f, 0.05f),
+                thumbnail = setThumb,
             });
         }
         catalog.categories.Add(setTab);
@@ -589,6 +694,7 @@ public static class FurnitureCatalogBuilder
                 {
                     thumb = RenderThumbnail(prefab, id, 148f, 20f, 0.07f);
                     itemThumbs[id] = thumb;
+                    AssignThumbnail(prefab, thumb);
                 }
                 category.entries.Add(new CatalogEntry
                 {
@@ -645,6 +751,20 @@ public static class FurnitureCatalogBuilder
             mt.localPosition = -new Vector3(b.center.x, b.min.y, b.center.z);
             bounds = PrefabThumbnailRenderer.WorldBounds(root);
 
+            FurnitureSpec spec = root.AddComponent<FurnitureSpec>();
+            spec.displayName = def.name;
+            if (Specs.TryGetValue(def.id, out (string type, string material, float kg) s))
+            {
+                spec.type = s.type;
+                spec.material = s.material;
+                spec.weightKg = s.kg;
+            }
+            else
+            {
+                spec.type = "Furniture";
+                Debug.LogWarning("[CatalogBuilder] No spec entry for " + def.id);
+            }
+
             return PrefabUtility.SaveAsPrefabAsset(root, ItemsFolder + "/" + def.id + ".prefab");
         }
         finally
@@ -670,7 +790,10 @@ public static class FurnitureCatalogBuilder
         private readonly Dictionary<string, GameObject> items;
         private readonly Dictionary<string, Bounds> bounds;
         public int pieces;
+        public float weightKg;
         public readonly List<string> missing = new List<string>();
+        /// <summary>Main material of each piece, most-used first once sorted (for the set's summary line).</summary>
+        public readonly Dictionary<string, int> materials = new Dictionary<string, int>();
 
         public SetLayout(Transform root, Dictionary<string, GameObject> items, Dictionary<string, Bounds> bounds)
         {
@@ -709,6 +832,15 @@ public static class FurnitureCatalogBuilder
             instance.transform.localPosition = position;
             instance.transform.localRotation = Quaternion.Euler(0f, yaw, 0f);
             pieces++;
+
+            if (Specs.TryGetValue(id, out (string type, string material, float kg) spec))
+            {
+                weightKg += spec.kg;
+                // "Oxblood leather, bentwood frame" -> "Oxblood leather"
+                string main = spec.material.Split(',')[0].Trim();
+                materials.TryGetValue(main, out int count);
+                materials[main] = count + 1;
+            }
             return new Placed { position = position, top = position.y + Size(id).y };
         }
     }
@@ -736,6 +868,21 @@ public static class FurnitureCatalogBuilder
             content.transform.localPosition = -new Vector3(b.center.x, b.min.y, b.center.z);
             bounds = PrefabThumbnailRenderer.WorldBounds(root);
             pieces = layout.pieces;
+
+            // The set's own details: summed weight and its three most-used materials.
+            List<KeyValuePair<string, int>> byUse = new List<KeyValuePair<string, int>>(layout.materials);
+            byUse.Sort((a, c) => c.Value.CompareTo(a.Value));
+            List<string> top = new List<string>();
+            for (int i = 0; i < byUse.Count && i < 3; i++)
+                top.Add(byUse[i].Key);
+
+            FurnitureSpec spec = root.AddComponent<FurnitureSpec>();
+            spec.displayName = def.name;
+            spec.type = SetTypes.TryGetValue(def.room, out string setType) ? setType : def.room + " set";
+            spec.material = string.Join(", ", top);
+            spec.weightKg = layout.weightKg;
+            spec.isRoomSet = true;
+            spec.pieceCount = pieces;
 
             return PrefabUtility.SaveAsPrefabAsset(root, SetsFolder + "/" + def.id + ".prefab");
         }
@@ -766,6 +913,16 @@ public static class FurnitureCatalogBuilder
         importer.textureCompression = TextureImporterCompression.CompressedHQ;
         importer.SaveAndReimport();
         return AssetDatabase.LoadAssetAtPath<Sprite>(path);
+    }
+
+    /// <summary>Stores the card image on the prefab's FurnitureSpec so the spec sheet can show it.</summary>
+    private static void AssignThumbnail(GameObject prefab, Sprite thumbnail)
+    {
+        FurnitureSpec spec = prefab != null ? prefab.GetComponent<FurnitureSpec>() : null;
+        if (spec == null)
+            return;
+        spec.thumbnail = thumbnail;
+        PrefabUtility.SavePrefabAsset(prefab);
     }
 
     private static string ItemName(string id)

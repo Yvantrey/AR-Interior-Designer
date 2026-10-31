@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6398119552892495504}
+  - component: {fileID: 8935673792606516578}
   m_Layer: 0
   m_Name: Chair_LoungeFrame
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 3182411861704266944}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8935673792606516578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2570652872574597156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Lounge chair
+  type: Lounge chair
+  material: White leather, chrome tube frame
+  weightKg: 14
+  thumbnail: {fileID: 21300000, guid: 8667a9b8c255c6c4d9c648fc8529d9fe, type: 3}
+  isRoomSet: 0
+  pieceCount: 1
 --- !u!1001 &3181095314384600492
 PrefabInstance:
   m_ObjectHideFlags: 0

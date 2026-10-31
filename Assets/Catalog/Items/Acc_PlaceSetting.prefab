@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 123096242388235383}
+  - component: {fileID: 8078700825431878461}
   m_Layer: 0
   m_Name: Acc_PlaceSetting
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 4094036845023699235}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8078700825431878461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9081910366216467587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Place setting
+  type: Tableware
+  material: Porcelain
+  weightKg: 1
+  thumbnail: {fileID: 0}
+  isRoomSet: 0
+  pieceCount: 1
 --- !u!1001 &7725995017549355905
 PrefabInstance:
   m_ObjectHideFlags: 0

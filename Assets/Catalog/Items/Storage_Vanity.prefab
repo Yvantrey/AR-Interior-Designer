@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3171858026322928173}
+  - component: {fileID: 6547129235347173775}
   m_Layer: 0
   m_Name: Storage_Vanity
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 5724086224154448466}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6547129235347173775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511696507842683434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Vanity
+  type: Vanity
+  material: Mahogany, oval mirror
+  weightKg: 30
+  thumbnail: {fileID: 21300000, guid: 823bc3c5b7da5934ba14ae64420f6f0f, type: 3}
+  isRoomSet: 0
+  pieceCount: 1
 --- !u!1001 &1709043121887973179
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4326064962427089209}
+  - component: {fileID: 5551098241826217024}
   m_Layer: 0
   m_Name: Dining_ChairFarm
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 8270572298410435343}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5551098241826217024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4357493577958627622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Farmhouse chair
+  type: Dining chair
+  material: Solid pine
+  weightKg: 6.5
+  thumbnail: {fileID: 21300000, guid: 4f1b946f9d72e9448a3b4b8fcc72838a, type: 3}
+  isRoomSet: 0
+  pieceCount: 1
 --- !u!1001 &7224247522580397716
 PrefabInstance:
   m_ObjectHideFlags: 0

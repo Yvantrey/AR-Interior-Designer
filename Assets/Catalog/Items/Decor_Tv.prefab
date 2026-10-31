@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7885650743606701919}
+  - component: {fileID: 442574710070927419}
   m_Layer: 0
   m_Name: Decor_Tv
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 8248969067692366881}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &442574710070927419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900499611381710208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: 65" TV
+  type: Television
+  material: 65-inch LED panel, aluminium stand
+  weightKg: 23
+  thumbnail: {fileID: 21300000, guid: c02a4b54cb66cf24a9c03d5c68a3f949, type: 3}
+  isRoomSet: 0
+  pieceCount: 1
 --- !u!1001 &8247758148358990689
 PrefabInstance:
   m_ObjectHideFlags: 0

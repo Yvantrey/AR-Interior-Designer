@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8027538003808161105}
+  - component: {fileID: 792509176657393854}
   m_Layer: 0
   m_Name: Decor_Laundry
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 8938790840915226883}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &792509176657393854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5173690359765823865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Laundry basket
+  type: Laundry basket
+  material: Cotton liner, copper wire
+  weightKg: 1.5
+  thumbnail: {fileID: 21300000, guid: 56f485be18b6a7f4aa02f40015aded3f, type: 3}
+  isRoomSet: 0
+  pieceCount: 1
 --- !u!1001 &8943238136270849379
 PrefabInstance:
   m_ObjectHideFlags: 0

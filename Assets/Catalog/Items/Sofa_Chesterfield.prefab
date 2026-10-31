@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1934175059288234345}
+  - component: {fileID: 4059866703561234434}
   m_Layer: 0
   m_Name: Sofa_Chesterfield
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 3079550819541372768}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4059866703561234434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8662281953013222272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Chesterfield sofa
+  type: Chesterfield sofa
+  material: Tufted burgundy leather, rolled arms
+  weightKg: 85
+  thumbnail: {fileID: 21300000, guid: f0c5cdbda65cdae4483fd5d4dfa3a6cf, type: 3}
+  isRoomSet: 0
+  pieceCount: 1
 --- !u!1001 &6376287448311906359
 PrefabInstance:
   m_ObjectHideFlags: 0

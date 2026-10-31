@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 191997659174066326}
+  - component: {fileID: 2374140528081313026}
   m_Layer: 0
   m_Name: Decor_FloorMirror
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 8304006926733577280}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2374140528081313026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4512748817432195234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Floor mirror
+  type: Floor mirror
+  material: Glass, white timber frame
+  weightKg: 14
+  thumbnail: {fileID: 21300000, guid: bb1275446f788744bb710c5ce272c261, type: 3}
+  isRoomSet: 0
+  pieceCount: 1
 --- !u!1001 &8301085286380195320
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3821291092847364986}
+  - component: {fileID: 2619453731258435422}
   m_Layer: 0
   m_Name: Chair_Leather
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 5520920404189021136}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2619453731258435422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5436276231857003485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Leather armchair
+  type: Armchair
+  material: Oxblood leather, bentwood frame
+  weightKg: 28
+  thumbnail: {fileID: 21300000, guid: a9e12a02e882ab1418c8ade29763a8d0, type: 3}
+  isRoomSet: 0
+  pieceCount: 1
 --- !u!1001 &7458124861629939905
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -32,8 +32,8 @@ Transform:
   - {fileID: 8049690897018048598}
   - {fileID: 4188829028445491199}
   - {fileID: 6439244566439403657}
-  - {fileID: 6526304849188038281}
   - {fileID: 8902903796675119686}
+  - {fileID: 2976246444703476608}
   - {fileID: 2316973273631628952}
   - {fileID: 4784569623371208756}
   - {fileID: 2791455238852120271}
@@ -51,6 +51,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8146396250689459736}
+  - component: {fileID: 3898620548094548913}
   m_Layer: 0
   m_Name: Set_ModernLiving
   m_TagString: Untagged
@@ -74,68 +75,25 @@ Transform:
   - {fileID: 664119915216089379}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &169087824906174489
-PrefabInstance:
+--- !u!114 &3898620548094548913
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 664119915216089379}
-    m_Modifications:
-    - target: {fileID: 2570652872574597156, guid: e465ff313423610448acf6c04a30b73f, type: 3}
-      propertyPath: m_Name
-      value: Chair_LoungeFrame
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.21643965
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.976296
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e465ff313423610448acf6c04a30b73f, type: 3}
---- !u!4 &6526304849188038281 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
-  m_PrefabInstance: {fileID: 169087824906174489}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4140310003713210875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Modern living
+  type: Living room set
+  material: White leather, Woven wool blend, Tempered glass
+  weightKg: 191.2
+  thumbnail: {fileID: 21300000, guid: ef123dd335d49bd41a33e683fff6c93c, type: 3}
+  isRoomSet: 1
+  pieceCount: 11
 --- !u!1001 &816929085214080481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,7 +294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.85
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -356,7 +314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.976296
+      value: 0.976296
       objectReference: {fileID: 0}
     - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -693,6 +651,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8520568978920325262, guid: 918f858e104b3d3448c6a94fee97f7ce, type: 3}
   m_PrefabInstance: {fileID: 7559304082016216631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8180629889996721424
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 664119915216089379}
+    m_Modifications:
+    - target: {fileID: 2570652872574597156, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      propertyPath: m_Name
+      value: Chair_LoungeFrame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.21643965
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.976296
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+--- !u!4 &2976246444703476608 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6398119552892495504, guid: e465ff313423610448acf6c04a30b73f, type: 3}
+  m_PrefabInstance: {fileID: 8180629889996721424}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8742760178576882326
 PrefabInstance:

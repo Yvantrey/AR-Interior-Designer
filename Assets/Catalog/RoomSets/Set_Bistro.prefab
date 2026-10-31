@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6772828641410524384}
+  - component: {fileID: 3785864464405575284}
   m_Layer: 0
   m_Name: Set_Bistro
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 9158867065461970102}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3785864464405575284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675753055364601642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Bistro for four
+  type: Dining set
+  material: Crimson velvet, White laminate, Glazed ceramic
+  weightKg: 70
+  thumbnail: {fileID: 21300000, guid: c52402fd6790827488a447f2148e4ce6, type: 3}
+  isRoomSet: 1
+  pieceCount: 7
 --- !u!1 &8341920869266459776
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,76 +83,14 @@ Transform:
   m_Children:
   - {fileID: 6501916759427248797}
   - {fileID: 5761369673267970349}
-  - {fileID: 4307374502095266434}
-  - {fileID: 225977957696230007}
-  - {fileID: 4954847777485012522}
+  - {fileID: 1536725498531371568}
+  - {fileID: 2322140392668688025}
+  - {fileID: 3720443765883287805}
   - {fileID: 6032606791234575161}
   - {fileID: 540178405591680979}
   m_Father: {fileID: 6772828641410524384}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1441396356171313334
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 9158867065461970102}
-    m_Modifications:
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5091168
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.509117
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.92387956
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.38268346
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5415372284997739161, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_Name
-      value: Dining_ChairRed
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
---- !u!4 &225977957696230007 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-  m_PrefabInstance: {fileID: 1441396356171313334}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3234945529445728323
+--- !u!1001 &176062782491343089
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -189,10 +147,134 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
---- !u!4 &4307374502095266434 stripped
+--- !u!4 &1536725498531371568 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-  m_PrefabInstance: {fileID: 3234945529445728323}
+  m_PrefabInstance: {fileID: 176062782491343089}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2631123064869706300
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9158867065461970102}
+    m_Modifications:
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.50911695
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5091168
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.38268358
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9238795
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5415372284997739161, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_Name
+      value: Dining_ChairRed
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+--- !u!4 &3720443765883287805 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+  m_PrefabInstance: {fileID: 2631123064869706300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3971029155766930520
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9158867065461970102}
+    m_Modifications:
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5091168
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.509117
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.92387956
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.38268346
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5415372284997739161, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+      propertyPath: m_Name
+      value: Dining_ChairRed
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+--- !u!4 &2322140392668688025 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
+  m_PrefabInstance: {fileID: 3971029155766930520}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6019991244401955771
 PrefabInstance:
@@ -255,68 +337,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 698124996032831782, guid: f4276e2893e3d5d40a8aa2d6cb650639, type: 3}
   m_PrefabInstance: {fileID: 6019991244401955771}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6044160919373602027
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 9158867065461970102}
-    m_Modifications:
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.50911695
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.5091168
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.38268358
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.9238795
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5415372284997739161, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-      propertyPath: m_Name
-      value: Dining_ChairRed
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
---- !u!4 &4954847777485012522 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1666907559705928385, guid: e978b284aae659b4db5f75a6e5cdc4bb, type: 3}
-  m_PrefabInstance: {fileID: 6044160919373602027}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6401432190952399852
 PrefabInstance:

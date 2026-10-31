@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7975445888543299856}
+  - component: {fileID: 924722814981453609}
   m_Layer: 0
   m_Name: Storage_Bookshelf
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 7215641623596438533}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &924722814981453609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897637634796172449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1900dcd7ccc89d4fb414d8379876107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnitureSpec
+  displayName: Cube bookshelf
+  type: Bookshelf
+  material: Black powder-coated steel
+  weightKg: 35
+  thumbnail: {fileID: 21300000, guid: 53ca08a46a5356345bb879f542e1461b, type: 3}
+  isRoomSet: 0
+  pieceCount: 1
 --- !u!1001 &7218706306377643461
 PrefabInstance:
   m_ObjectHideFlags: 0
