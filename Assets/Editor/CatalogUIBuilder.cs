@@ -156,6 +156,9 @@ public static class CatalogUIBuilder
         // Draw order: catalogue below the colour sheet, status bar on top of both.
         root.SetSiblingIndex(colorPicker.transform.GetSiblingIndex());
 
+        // --- Capture: header button, off-screen spec sheet, "Screenshot saved" screen ---
+        BuildCapture(canvas.transform, panel, manager, rounded, blue);
+
         // --- Re-wire the manager and retire the old Canvas panels ---
         Undo.RecordObject(manager, "Wire catalog");
         manager.furniturePanel = root.gameObject;
@@ -399,6 +402,210 @@ public static class CatalogUIBuilder
 
         bar.gameObject.SetActive(false);
         return bar;
+    }
+
+    //=========================================================
+    // Capture (spec-sheet screenshot)
+    //=========================================================
+
+    private const string SheetRootName = "Spec Sheet Capture";
+    private const int SheetRows = 5;
+
+    private static void BuildCapture(Transform canvas, FurnitureCatalogPanel panel, TouchInteractionManager manager, Sprite rounded, Sprite blue)
+    {
+        DestroyChild(canvas, "Capture");
+        GameObject oldSheet = GameObject.Find(SheetRootName);
+        if (oldSheet != null)
+            Object.DestroyImmediate(oldSheet);
+
+        RectTransform root = NewRect("Capture", canvas);
+        Stretch(root);
+        SpecSheetCapture capture = root.gameObject.AddComponent<SpecSheetCapture>();
+        capture.interactionManager = manager;
+
+        // Capture button in the catalogue header, left of Hide (visible whenever the catalogue is).
+        RectTransform header = (RectTransform)panel.sheet.Find("Content");
+        Button captureButton = blue != null
+            ? NewFlatButton("Capture Button", header, blue, "Capture", 0f, 36f)
+            : NewChipButton("Capture Button", header, rounded, "Capture", 0f, 36f, 0f);
+        Place((RectTransform)captureButton.transform, new Vector2(1f, 1f), new Vector2(1f, 1f), new Vector2(-88f, -10f), new Vector2(96f, 36f));
+        captureButton.GetComponentInChildren<TMP_Text>().fontSize = 13f;
+        capture.captureButton = captureButton;
+
+        BuildSpecSheet(capture, rounded);
+        BuildSavedScreen(root, capture, rounded, blue);
+    }
+
+    /// <summary>
+    /// The 1080 x 1920 spec sheet, on its own canvas and camera far below the
+    /// room (so the AR camera never sees it). Coordinates are image pixels.
+    /// </summary>
+    private static void BuildSpecSheet(SpecSheetCapture capture, Sprite rounded)
+    {
+        GameObject holder = new GameObject(SheetRootName);
+        holder.transform.position = new Vector3(0f, -1000f, 0f);
+
+        GameObject cameraObject = new GameObject("Sheet Camera");
+        cameraObject.transform.SetParent(holder.transform, false);
+        Camera camera = cameraObject.AddComponent<Camera>();
+        camera.enabled = false;
+        camera.clearFlags = CameraClearFlags.SolidColor;
+        camera.backgroundColor = Navy;
+        camera.orthographic = true;
+        camera.nearClipPlane = 0.1f;
+        camera.farClipPlane = 10f;
+        camera.cullingMask = 1 << LayerMask.NameToLayer("UI");
+
+        GameObject canvasObject = new GameObject("Sheet Canvas", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler));
+        canvasObject.layer = LayerMask.NameToLayer("UI");
+        canvasObject.transform.SetParent(holder.transform, false);
+        Canvas sheetCanvas = canvasObject.GetComponent<Canvas>();
+        sheetCanvas.renderMode = RenderMode.ScreenSpaceCamera;
+        sheetCanvas.worldCamera = camera;
+        sheetCanvas.planeDistance = 1f;
+        CanvasScaler scaler = canvasObject.GetComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1080f, 1920f);
+        scaler.matchWidthOrHeight = 0f;
+        RectTransform page = (RectTransform)canvasObject.transform;
+
+        Image background = NewImage("Background", page, Navy, null, 0f);
+        Stretch(background.rectTransform);
+
+        // Header
+        Texture2D icon = AssetDatabase.LoadAssetAtPath<Texture2D>(AppIconPath);
+        if (icon != null)
+        {
+            RawImage logo = NewRect("App Icon", page).gameObject.AddComponent<RawImage>();
+            logo.texture = icon;
+            PlaceTop(logo.rectTransform, 48f, 28f, 104f, 104f);
+        }
+        TextMeshProUGUI brand = NewText("Brand", page, "AR Furniture Designer", 46f, true, Color.white, TextAlignmentOptions.Left);
+        PlaceTop(brand.rectTransform, 176f, 30f, 860f, 56f);
+        TextMeshProUGUI date = NewText("Date", page, "Room capture", 30f, false, MutedText, TextAlignmentOptions.Left);
+        PlaceTop(date.rectTransform, 176f, 90f, 860f, 40f);
+
+        // Photo (cropped to fill its frame)
+        Image frame = NewImage("Photo Frame", page, Color.black, null, 0f);
+        PlaceTop(frame.rectTransform, 0f, 160f, 1080f, 980f);
+        frame.gameObject.AddComponent<RectMask2D>();
+        RawImage photo = NewRect("Photo", frame.rectTransform).gameObject.AddComponent<RawImage>();
+        Place(photo.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(1080f, 980f));
+        AspectRatioFitter fitter = photo.gameObject.AddComponent<AspectRatioFitter>();
+        fitter.aspectMode = AspectRatioFitter.AspectMode.EnvelopeParent;
+        fitter.aspectRatio = 1080f / 2340f;
+
+        // Section title and totals
+        TextMeshProUGUI section = NewText("Section Title", page, "Pieces in this room", 40f, true, Color.white, TextAlignmentOptions.Left);
+        PlaceTop(section.rectTransform, 48f, 1172f, 560f, 52f);
+        TextMeshProUGUI summary = NewText("Summary", page, "", 30f, false, MutedText, TextAlignmentOptions.Right);
+        PlaceTop(summary.rectTransform, 560f, 1180f, 472f, 44f);
+        Image divider = NewImage("Divider", page, new Color(1f, 1f, 1f, 0.12f), null, 0f);
+        PlaceTop(divider.rectTransform, 48f, 1238f, 984f, 2f);
+
+        // Rows
+        SpecSheetCapture.SpecRow[] rows = new SpecSheetCapture.SpecRow[SheetRows];
+        for (int i = 0; i < SheetRows; i++)
+        {
+            float top = 1252f + i * 116f;
+            RectTransform row = NewRect("Row " + (i + 1), page);
+            PlaceTop(row, 0f, top, 1080f, 116f);
+
+            Image well = NewImage("Well", row, new Color(0.9f, 0.937f, 0.945f, 1f), rounded, 16f);
+            PlaceTop(well.rectTransform, 48f, 10f, 96f, 96f);
+            Image thumb = NewImage("Thumbnail", row, Color.white, null, 0f);
+            PlaceTop(thumb.rectTransform, 52f, 14f, 88f, 88f);
+            thumb.preserveAspect = true;
+
+            TextMeshProUGUI title = NewText("Name", row, "Item", 34f, true, Color.white, TextAlignmentOptions.Left);
+            PlaceTop(title.rectTransform, 168f, 12f, 520f, 44f);
+
+            Image swatchRing = NewImage("Swatch Ring", row, new Color(1f, 1f, 1f, 0.5f), rounded, 15f);
+            PlaceTop(swatchRing.rectTransform, 168f, 66f, 30f, 30f);
+            Image swatch = NewImage("Swatch", swatchRing.rectTransform, Color.white, rounded, 13f);
+            Place(swatch.rectTransform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(26f, 26f));
+
+            // Long material lines shrink a little before they are cut off.
+            TextMeshProUGUI details = NewText("Details", row, "", 26f, false, BodyText, TextAlignmentOptions.Left);
+            details.enableAutoSizing = true;
+            details.fontSizeMin = 20f;
+            details.fontSizeMax = 26f;
+            PlaceTop(details.rectTransform, 210f, 62f, 500f, 38f);
+
+            TextMeshProUGUI size = NewText("Size", row, "", 30f, true, Color.white, TextAlignmentOptions.Right);
+            PlaceTop(size.rectTransform, 700f, 14f, 332f, 40f);
+            TextMeshProUGUI weight = NewText("Weight", row, "", 26f, false, MutedText, TextAlignmentOptions.Right);
+            PlaceTop(weight.rectTransform, 700f, 64f, 332f, 36f);
+
+            Image rule = NewImage("Rule", row, new Color(1f, 1f, 1f, 0.06f), null, 0f);
+            PlaceTop(rule.rectTransform, 48f, 114f, 984f, 2f);
+
+            rows[i] = new SpecSheetCapture.SpecRow
+            {
+                root = row.gameObject, thumbnail = thumb, title = title, swatch = swatch,
+                details = details, size = size, weight = weight,
+            };
+        }
+
+        TextMeshProUGUI more = NewText("More", page, "", 26f, false, MutedText, TextAlignmentOptions.Left);
+        PlaceTop(more.rectTransform, 48f, 1846f, 440f, 40f);
+        TextMeshProUGUI note = NewText("Note", page, "W × D × H at current size  ·  weights are estimates", 22f, false, MutedText, TextAlignmentOptions.Right);
+        PlaceTop(note.rectTransform, 488f, 1850f, 544f, 36f);
+
+        canvasObject.SetActive(false);
+
+        capture.sheetRoot = canvasObject;
+        capture.sheetCamera = camera;
+        capture.photo = photo;
+        capture.photoFitter = fitter;
+        capture.dateLabel = date;
+        capture.summaryLabel = summary;
+        capture.moreLabel = more;
+        capture.rows = rows;
+    }
+
+    private static void BuildSavedScreen(RectTransform parent, SpecSheetCapture capture, Sprite rounded, Sprite blue)
+    {
+        Image screen = NewImage("Saved Screen", parent, Navy, null, 0f);
+        Stretch(screen.rectTransform);
+        screen.raycastTarget = true; // blocks the AR view while open
+
+        TextMeshProUGUI title = NewText("Title", screen.rectTransform, "Screenshot saved", 24f, true, Color.white, TextAlignmentOptions.Center);
+        TopStretch(title.rectTransform, 72f, 34f, 20f);
+        TextMeshProUGUI message = NewText("Message", screen.rectTransform, "", 14f, false, MutedText, TextAlignmentOptions.Top);
+        message.textWrappingMode = TextWrappingModes.Normal;
+        message.overflowMode = TextOverflowModes.Overflow;
+        TopStretch(message.rectTransform, 112f, 44f, 32f);
+
+        Image frame = NewImage("Preview Frame", screen.rectTransform, new Color(1f, 1f, 1f, 0.1f), rounded, 16f);
+        Place(frame.rectTransform, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(0f, -168f), new Vector2(262f, 466f));
+        RawImage preview = NewRect("Preview", frame.rectTransform).gameObject.AddComponent<RawImage>();
+        Stretch(preview.rectTransform);
+        preview.rectTransform.offsetMin = new Vector2(6f, 6f);
+        preview.rectTransform.offsetMax = new Vector2(-6f, -6f);
+        AspectRatioFitter fitter = preview.gameObject.AddComponent<AspectRatioFitter>();
+        fitter.aspectMode = AspectRatioFitter.AspectMode.FitInParent;
+        fitter.aspectRatio = 1080f / 1920f;
+
+        Button keep = blue != null
+            ? NewFlatButton("Keep Designing Button", screen.rectTransform, blue, "Keep designing", 0f, 54f)
+            : NewChipButton("Keep Designing Button", screen.rectTransform, rounded, "Keep designing", 0f, 54f, 0f);
+        BottomStretch((RectTransform)keep.transform, 96f, 54f, 40f);
+        keep.GetComponentInChildren<TMP_Text>().fontSize = 17f;
+
+        Button back = NewChipButton("Back To Start Button", screen.rectTransform, rounded, "Back to start", 0f, 46f, 0f);
+        back.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.14f);
+        BottomStretch((RectTransform)back.transform, 36f, 46f, 40f);
+
+        screen.gameObject.SetActive(false);
+
+        capture.savedScreen = screen.gameObject;
+        capture.savedPreview = preview;
+        capture.savedPreviewFitter = fitter;
+        capture.savedTitle = title;
+        capture.savedMessage = message;
+        capture.keepDesigningButton = keep;
+        capture.backToStartButton = back;
     }
 
     /// <summary>Switches off the old Canvas panels this UI replaces and removes the retired gesture buttons.</summary>
@@ -887,6 +1094,55 @@ internal static class UIPreview
             Render(Path.Combine(folder, "ui_main_color.png"), true);
         }
         EditorSceneManager.OpenScene(scenePath); // discard preview-only changes
+        RenderCapture(scenePath, folder);
+    }
+
+    /// <summary>
+    /// Runs the real capture code on a few placed catalog pieces (one resized
+    /// and recoloured) and writes the resulting spec sheet and saved screen.
+    /// </summary>
+    private static void RenderCapture(string scenePath, string folder)
+    {
+        EditorSceneManager.OpenScene(scenePath);
+        TouchInteractionManager manager = Object.FindFirstObjectByType<TouchInteractionManager>(FindObjectsInactive.Include);
+        SpecSheetCapture capture = Object.FindFirstObjectByType<SpecSheetCapture>(FindObjectsInactive.Include);
+        if (manager == null || capture == null)
+            return;
+
+        BindingFlags flags = BindingFlags.NonPublic | BindingFlags.Instance;
+        var placed = (System.Collections.Generic.List<GameObject>)typeof(TouchInteractionManager)
+            .GetField("placedFurniture", flags).GetValue(manager);
+        string[] ids =
+        {
+            "Assets/Catalog/Items/Sofa_Chesterfield.prefab", "Assets/Catalog/Items/Chair_Leather.prefab",
+            "Assets/Catalog/Items/Table_CoffeeGlass.prefab", "Assets/Catalog/RoomSets/Set_FamilyDining.prefab",
+            "Assets/Catalog/Items/Light_Tripod.prefab", "Assets/Catalog/Items/Plant_Maple.prefab",
+            "Assets/Catalog/Items/Rug_Woven.prefab",
+        };
+        for (int i = 0; i < ids.Length; i++)
+        {
+            GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(ids[i]);
+            if (prefab == null)
+                continue;
+            GameObject piece = Object.Instantiate(prefab, new Vector3(i * 4f, 0f, 30f), Quaternion.identity);
+            SelectableFurniture furniture = piece.AddComponent<SelectableFurniture>();
+            typeof(SelectableFurniture).GetMethod("Awake", flags).Invoke(furniture, null);
+            if (i == 1)
+            {
+                furniture.ApplyFootprintPose(piece.transform.position, 0f, 1.1f);
+                furniture.SetCustomColor(new Color32(142, 98, 61, 255));
+            }
+            placed.Add(piece);
+        }
+
+        Texture2D photo = AssetDatabase.LoadAssetAtPath<Texture2D>(FakeFeed);
+        typeof(SpecSheetCapture).GetMethod("Awake", flags).Invoke(capture, null);
+        Texture2D sheet = (Texture2D)typeof(SpecSheetCapture).GetMethod("RenderSheet", flags).Invoke(capture, new object[] { photo });
+        File.WriteAllBytes(Path.Combine(folder, "capture_sheet.png"), sheet.EncodeToPNG());
+
+        typeof(SpecSheetCapture).GetMethod("ShowSavedScreen", flags).Invoke(capture, new object[] { sheet, true, null });
+        Render(Path.Combine(folder, "capture_saved.png"), false);
+        EditorSceneManager.OpenScene(scenePath);
     }
 
     public static void RenderMainMenu(string scenePath, string folder)

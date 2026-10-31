@@ -17,10 +17,22 @@ public class PlaneTrackingVisualizer : MonoBehaviour
     private readonly Dictionary<TrackableId, LineRenderer> outlines = new Dictionary<TrackableId, LineRenderer>();
     private readonly List<TrackableId> staleIds = new List<TrackableId>();
     private readonly HashSet<TrackableId> seenIds = new HashSet<TrackableId>();
+    private bool visible = true;
 
     public void Initialize(ARPlaneManager planes)
     {
         planeManager = planes;
+    }
+
+    /// <summary>Hides every outline regardless of tracking (used while capturing a screenshot).</summary>
+    public void SetVisible(bool value)
+    {
+        visible = value;
+        foreach (KeyValuePair<TrackableId, LineRenderer> entry in outlines)
+        {
+            if (entry.Value != null && !value)
+                entry.Value.gameObject.SetActive(false);
+        }
     }
 
     private void Update()
@@ -39,8 +51,8 @@ public class PlaneTrackingVisualizer : MonoBehaviour
 
             bool isTracking = plane.trackingState == TrackingState.Tracking;
             LineRenderer line = GetOrCreateOutline(plane.trackableId);
-            line.gameObject.SetActive(isTracking);
-            if (isTracking)
+            line.gameObject.SetActive(isTracking && visible);
+            if (isTracking && visible)
                 DrawRectangle(line, plane);
         }
 

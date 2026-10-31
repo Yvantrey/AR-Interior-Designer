@@ -250,3 +250,38 @@ Room sets: Classic lounge, Modern living, Media lounge · Minimalist bedroom, Cl
 - [ ] Delete reads "Cancel" while placing; Clear all needs two taps.
 - [ ] Main menu: Start, How it works (Got it closes it), Exit.
 - [ ] Frame rate is smooth with a full room set (if not, prefer the lighter sets or fewer décor pieces).
+
+---
+
+## 11. Capture + spec sheet (Stage B, feature 4)
+
+Built on 31 October 2026 after Stage A was confirmed on a phone. Compiles with 0 errors and 0 warnings; the capture was run in batch mode on real catalog pieces and the output checked. **Not yet tested on a phone.**
+
+### How it works
+- **Capture** button (pack blue) in the catalog header, enabled when at least one piece is placed.
+- One tap: cancels any pending placement, hides all overlay UI, the selection ring, the floor reticle and the plane outlines, then grabs the AR frame.
+- Renders a **1080 × 1920 spec sheet** off-screen (own canvas and camera at y = -1000):
+  - header with app icon, date and time;
+  - the photo;
+  - "Pieces in this room" with totals (piece count, ≈ total kg);
+  - up to 5 rows, selected piece first: thumbnail, name, colour swatch, materials (+ HEX if recoloured), live W × D × H in cm at the current scale, ≈ weight (scales with size³), size %;
+  - "+ N more" and a note that weights are estimates.
+- Saves a JPEG to **Gallery › Pictures/AR Furniture Designer** through Android MediaStore (`GallerySaver`, no plugin, no permission: minSdk 29). In the Editor it writes to `Application.persistentDataPath`.
+- **Screenshot saved** screen (as in Figma): preview, Keep designing, Back to start. On failure: "Couldn't save screenshot" plus the reason.
+
+### Data
+- `FurnitureSpec` component on every generated item and room set: display name, type, material, estimated weight, thumbnail, piece count.
+- Values live in the `Specs` table in `FurnitureCatalogBuilder.cs`. **Weights and materials are estimates written from each model's appearance**; the packs ship no such data. Edit the table, then re-run Build Furniture Catalog. Room sets sum their pieces' weights and list their three most-used materials.
+
+### Files
+New: `FurnitureSpec.cs`, `SpecSheetCapture.cs`, `GallerySaver.cs`. Changed: `FloorPlaneIndicator.cs` and `PlaneTrackingVisualizer.cs` (`SetVisible`), `FurnitureCatalogBuilder.cs` (spec table), `CatalogUIBuilder.cs` (capture UI and preview), `MainScene.unity`.
+
+### On-phone checks
+- [ ] Capture is greyed out until something is placed.
+- [ ] The saved image has no app UI, cyan ring, reticle or plane outlines.
+- [ ] Rows match what is placed; resizing a piece changes its size, weight and % on the next capture.
+- [ ] A recoloured piece shows its swatch and HEX.
+- [ ] The image appears in Gallery › AR Furniture Designer.
+- [ ] Keep designing returns to the room as it was; Back to start opens the main menu.
+
+Feature 3 (live size display while editing) is still to do; the same measurements (`LocalBounds × ScaleFactor`) will drive it.

@@ -17,6 +17,15 @@ public class FloorPlaneIndicator : MonoBehaviour
     private ARRaycastManager raycastManager;
     private ARPlaneManager planeManager;
     private LineRenderer line;
+    private bool visible = true;
+
+    /// <summary>Hides the ring regardless of tracking (used while capturing a screenshot).</summary>
+    public void SetVisible(bool value)
+    {
+        visible = value;
+        if (!value && line != null)
+            line.gameObject.SetActive(false);
+    }
 
     public void Initialize(ARRaycastManager raycast, ARPlaneManager planes)
     {
@@ -55,7 +64,7 @@ public class FloorPlaneIndicator : MonoBehaviour
 
     private void Update()
     {
-        if (line == null || raycastManager == null)
+        if (line == null || raycastManager == null || !visible)
             return;
 
         Vector2 center = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
